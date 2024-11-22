@@ -1,0 +1,581 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables de color */
+:root {
+  --color-azul: #1a3b5d;
+  --color-verde: #3aa89b;
+  --color-gris: #e0e7ec;
+  --color-blanco: #ffffff;
+  --color-negro: #1c1c1c;
+}
+
+/* Estilos generales */
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--color-blanco);
+  color: var(--color-negro);
+  line-height: 1.6;
+}
+
+/* Contenedor principal */
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px 0;
+  height: 100vh;
+  align-content: center;
+}
+
+/* Encabezado */
+@keyframes hero-gradient-animation {
+  0% {
+    --x-0: 11%;
+    --c-0: hsla(195, 79%, 51%, 1);
+    --y-0: 96%;
+    --s-start-0: 37%;
+    --s-end-0: 90%;
+    --c-1: hsla(272, 100%, 64%, 1);
+    --x-1: 95%;
+    --y-1: 92%;
+    --s-start-1: 31%;
+    --s-end-1: 84%;
+    --y-2: 7%;
+    --s-start-2: 41%;
+    --s-end-2: 61%;
+    --x-2: 58%;
+    --c-2: hsla(216, 95%, 54%, 1);
+    --c-3: hsla(239, 76%, 52%, 1);
+    --x-3: 62%;
+    --s-start-3: 22%;
+    --s-end-3: 59%;
+    --y-3: 35%;
+    --x-4: 2%;
+    --y-4: 63%;
+    --c-4: hsla(232, 81%, 92%, 1);
+    --s-start-4: 19%;
+    --s-end-4: 70%;
+  }
+
+  50% {
+    --x-0: 6%;
+    --c-0: hsla(313, 78%, 76%, 1);
+    --y-0: 12%;
+    --s-start-0: 29%;
+    --s-end-0: 73%;
+    --c-1: hsla(235, 87%, 56%, 1);
+    --x-1: 77%;
+    --y-1: 29%;
+    --s-start-1: 8%;
+    --s-end-1: 52.61503700898072%;
+    --y-2: 23%;
+    --s-start-2: 29%;
+    --s-end-2: 80%;
+    --x-2: 75%;
+    --c-2: hsla(220, 51%, 96%, 1);
+    --c-3: hsla(218, 76%, 75%, 1);
+    --x-3: 76%;
+    --s-start-3: 2%;
+    --s-end-3: 81%;
+    --y-3: 64%;
+    --x-4: 41%;
+    --y-4: 86%;
+    --c-4: hsla(315, 89%, 98%, 1);
+    --s-start-4: 24%;
+    --s-end-4: 81%;
+  }
+
+  100% {
+    --c-1: hsla(235, 87%, 56%, 1);
+    --x-1: 36%;
+    --y-1: 13%;
+    --s-start-1: 8%;
+    --s-end-1: 21.71776697271709%;
+  }
+}
+
+@property --x-0 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 11%;
+}
+
+@property --c-0 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: hsla(195, 79%, 51%, 1);
+}
+
+@property --y-0 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 96%;
+}
+
+@property --s-start-0 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 37%;
+}
+
+@property --s-end-0 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 90%;
+}
+
+@property --c-1 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: hsla(272, 100%, 64%, 1);
+}
+
+@property --x-1 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 95%;
+}
+
+@property --y-1 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 92%;
+}
+
+@property --s-start-1 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 31%;
+}
+
+@property --s-end-1 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 84%;
+}
+
+@property --y-2 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 7%;
+}
+
+@property --s-start-2 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 41%;
+}
+
+@property --s-end-2 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 61%;
+}
+
+@property --x-2 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 58%;
+}
+
+@property --c-2 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: hsla(216, 95%, 54%, 1);
+}
+
+@property --c-3 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: hsla(239, 76%, 52%, 1);
+}
+
+@property --x-3 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 62%;
+}
+
+@property --s-start-3 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 22%;
+}
+
+@property --s-end-3 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 59%;
+}
+
+@property --y-3 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 35%;
+}
+
+@property --x-4 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 2%;
+}
+
+@property --y-4 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 63%;
+}
+
+@property --c-4 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: hsla(232, 81%, 92%, 1);
+}
+
+@property --s-start-4 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 19%;
+}
+
+@property --s-end-4 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 70%;
+}
+#main-header {
+  --x-0: 11%;
+  --c-0: hsla(195, 79%, 51%, 1);
+  --y-0: 96%;
+  --c-1: hsla(272, 100%, 64%, 1);
+  --x-1: 95%;
+  --y-1: 92%;
+  --y-2: 7%;
+  --x-2: 58%;
+  --c-2: hsla(216, 95%, 54%, 1);
+  --c-3: hsla(239, 76%, 52%, 1);
+  --x-3: 62%;
+  --y-3: 35%;
+  --x-4: 2%;
+  --y-4: 63%;
+  --c-4: hsla(232, 81%, 92%, 1);
+  background-color: hsla(272, 59%, 39%, 1);
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1495 1495' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"),
+    radial-gradient(
+      circle at var(--x-0) var(--y-0),
+      var(--c-0) var(--s-start-0),
+      transparent var(--s-end-0)
+    ),
+    radial-gradient(
+      circle at var(--x-1) var(--y-1),
+      var(--c-1) var(--s-start-1),
+      transparent var(--s-end-1)
+    ),
+    radial-gradient(
+      circle at var(--x-2) var(--y-2),
+      var(--c-2) var(--s-start-2),
+      transparent var(--s-end-2)
+    ),
+    radial-gradient(
+      circle at var(--x-3) var(--y-3),
+      var(--c-3) var(--s-start-3),
+      transparent var(--s-end-3)
+    ),
+    radial-gradient(
+      circle at var(--x-4) var(--y-4),
+      var(--c-4) var(--s-start-4),
+      transparent var(--s-end-4)
+    );
+  animation: hero-gradient-animation 10s linear infinite alternate;
+  background-blend-mode: overlay, normal, hard-light, normal, normal, normal;
+  color: var(--color-blanco);
+  padding: 20px 0;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.header-info h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 2.5em;
+  margin-bottom: -10px;
+}
+
+.header-info h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1.5em;
+}
+
+.photo img {
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  margin-right: 50px;
+  object-fit: cover;
+}
+
+/*boton cv*/
+.botonContacto {
+  text-decoration: none;
+  color: #ffffff;
+}
+.btn {
+  --border-color: linear-gradient(-45deg, #ffae00, #7e03aa, #00fffb);
+  --border-width: 0.125em;
+  --curve-size: 0.5em;
+  --blur: 30px;
+  --bg: #0803129a;
+  --color: #afffff;
+  color: var(--color);
+  cursor: pointer;
+  /* use position: relative; so that BG is only for .btn */
+  position: relative;
+  isolation: isolate;
+  display: inline-grid;
+  place-content: center;
+  padding: 0.5em 1.5em;
+  font-size: 17px;
+  border: 0;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+  clip-path: polygon(
+    /* Top-left */ 0% var(--curve-size),
+    var(--curve-size) 0,
+    /* top-right */ 100% 0,
+    100% calc(100% - var(--curve-size)),
+    /* bottom-right 1 */ calc(100% - var(--curve-size)) 100%,
+    /* bottom-right 2 */ 0 100%
+  );
+  transition: color 250ms;
+}
+
+.btn::after,
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.btn::before {
+  background: var(--border-color);
+  background-size: 300% 300%;
+  animation: move-bg7234 5s ease infinite;
+  z-index: -2;
+}
+
+@keyframes move-bg7234 {
+  0% {
+    background-position: 31% 0%;
+  }
+
+  50% {
+    background-position: 70% 100%;
+  }
+
+  100% {
+    background-position: 31% 0%;
+  }
+}
+
+.btn::after {
+  background: var(--bg);
+  z-index: -1;
+  clip-path: polygon(
+    /* Top-left */ var(--border-width)
+      calc(var(--curve-size) + var(--border-width) * 0.5),
+    calc(var(--curve-size) + var(--border-width) * 0.5) var(--border-width),
+    /* top-right */ calc(100% - var(--border-width)) var(--border-width),
+    calc(100% - var(--border-width))
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    /* bottom-right 1 */
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+      calc(100% - var(--border-width)),
+    /* bottom-right 2 */ var(--border-width) calc(100% - var(--border-width))
+  );
+  transition: clip-path 500ms;
+}
+
+.btn:where(:hover, :focus)::after {
+  clip-path: polygon(
+    /* Top-left */ calc(100% - var(--border-width))
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    calc(100% - var(--border-width)) var(--border-width),
+    /* top-right */ calc(100% - var(--border-width)) var(--border-width),
+    calc(100% - var(--border-width))
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    /* bottom-right 1 */
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+      calc(100% - var(--border-width)),
+    /* bottom-right 2 */
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+      calc(100% - var(--border-width))
+  );
+  transition: 200ms;
+}
+
+.btn:where(:hover, :focus) {
+  color: #fff;
+}
+
+/* Navegación */
+#main-nav {
+  padding: 10px 0;
+  justify-content: center;
+  position: fixed;
+  width: 100vw;
+}
+
+#main-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+#main-nav ul li {
+  margin: 0 15px;
+}
+
+#main-nav ul li a {
+  text-decoration: none;
+  color: var(--color-negro);
+  font-weight: 700;
+  transition: color 0.3s;
+}
+
+#main-nav ul li a:hover {
+  color: var(--color-verde);
+}
+
+/* Secciones */
+.section {
+  padding: 40px 0;
+}
+
+/* Títulos de secciones */
+.section h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Sobre Mí */
+#about p,
+blockquote {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#about blockquote {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  margin-top: 20px;
+}
+
+/* Competencias */
+.skills {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.skill-set {
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+.skill-set h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* Experiencia Profesional */
+.experience .job {
+  margin-bottom: 20px;
+}
+
+.experience h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+/* Educación */
+.education .degree,
+.education .course {
+  margin-bottom: 20px;
+}
+
+.education h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+/* Contacto */
+form {
+  max-width: 500px;
+  margin: 0 auto 20px;
+}
+
+form label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid var(--color-gris);
+}
+
+form button {
+  background-color: var(--color-verde);
+  color: var(--color-blanco);
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: var(--color-azul);
+}
+
+.contact-info p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.contact-info a {
+  color: var(--color-azul);
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.3s;
+}
+
+.contact-info a:hover {
+  color: var(--color-verde);
+}
+
+/* Pie de página */
+#main-footer {
+  background-color: var(--color-azul);
+  color: var(--color-blanco);
+  padding: 10px 0;
+  text-align: center;
+}
