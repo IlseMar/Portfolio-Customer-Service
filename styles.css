@@ -336,6 +336,9 @@ body {
   --blur: 30px;
   --bg: #0803129a;
   --color: #afffff;
+  margin-top: 7px;
+  width: 70px;
+  height: 22px;
   color: var(--color);
   cursor: pointer;
   /* use position: relative; so that BG is only for .btn */
@@ -344,7 +347,7 @@ body {
   display: inline-grid;
   place-content: center;
   padding: 0.5em 1.5em;
-  font-size: 17px;
+  font-size: 13px;
   border: 0;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
   clip-path: polygon(
@@ -460,8 +463,26 @@ body {
   padding: 40px 0;
 }
 
-/* Títulos de secciones */
+.card {
+  backdrop-filter: blur(3px) saturate(196%);
+  -webkit-backdrop-filter: blur(3px) saturate(196%);
+  background-color: rgba(255, 255, 255, 0.41);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
 .section h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.section1 {
+  background-image: url(./assets/Ilustraciones/Wireframe@2x.png);
+  background-position: center;
+}
+.section1 h2 {
   font-family: "Playfair Display", serif;
   font-size: 2.2em;
   margin-bottom: 20px;
@@ -483,10 +504,31 @@ blockquote {
 }
 
 /* Competencias */
-.skills {
+
+.slider ul {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  padding: 0;
+  width: 200%;
+  animation: mover 20s linear infinite;
+}
+
+.slider li {
+  list-style: none;
+  width: 100%;
+  padding-right: 5rem;
+}
+
+img {
+  height: 150px;
+  width: 200px;
+}
+@keyframes mover {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 .skill-set {
@@ -542,7 +584,6 @@ form textarea {
   margin-bottom: 20px;
   border: 1px solid var(--color-gris);
 }
-
 form button {
   background-color: var(--color-verde);
   color: var(--color-blanco);
@@ -551,28 +592,22 @@ form button {
   cursor: pointer;
   transition: background-color 0.3s;
 }
-
 form button:hover {
   background-color: var(--color-azul);
 }
-
 .contact-info p {
   text-align: center;
   margin-top: 10px;
 }
-
 .contact-info a {
   color: var(--color-azul);
   text-decoration: none;
   font-weight: 700;
   transition: color 0.3s;
 }
-
 .contact-info a:hover {
   color: var(--color-verde);
 }
-
-/* Pie de página */
 #main-footer {
   background-color: var(--color-azul);
   color: var(--color-blanco);
